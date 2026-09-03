@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Der Q4-Effekt – Mitarbeiter finden im 4. Quartal · Straßen- &amp; Tiefbau (3-Seiten-Plan, PDF) | GreenCareers</title>
+  <meta name="description" content="So finden Straßen- und Tiefbau-Betriebe im 4. Quartal die Mitarbeiter für die Saison 2027. Der 3-Seiten-Plan – kostenlos als PDF.">
+  <meta property="og:title" content="Der Q4-Effekt – Mitarbeiter finden im 4. Quartal">
+  <meta property="og:description" content="So finden Straßen- und Tiefbau-Betriebe im 4. Quartal die Mitarbeiter für die Saison 2027. 3-Seiten-Plan, kostenlos als PDF.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://q4-effekt-tiefbau.green-careers.de/assets/preview.png">
+  <link rel="icon" type="image/png" href="assets/favicon-32.png">
+
+  <link rel="preload" href="assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+
+  <style>
+    @font-face{font-family:'Fraunces';src:url('assets/fonts/fraunces-var.woff2') format('woff2');font-weight:600 700;font-style:normal;font-display:swap;}
+    @font-face{font-family:'Fraunces';src:url('assets/fonts/fraunces-italic.woff2') format('woff2');font-weight:600;font-style:italic;font-display:swap;}
+    @font-face{font-family:'Inter';src:url('assets/fonts/inter-var.woff2') format('woff2');font-weight:400 800;font-style:normal;font-display:swap;}
+
+    :root{
+      --bg:#0F1316; --bg-2:#14181C; --card:#1B2126;
+      --paper:#F4F2EB; --paper-2:#FBFAF7;
+      --ink:#F4F1E8; --ink-dim:rgba(244,241,232,.72); --ink-faint:rgba(244,241,232,.45);
+      --q-ink:#14181C; --q-dim:#5B6570; --q-faint:#8B939C;
+      --green:#EA580C; --green-deep:#C2410C; --green-bright:#F97316; --mint:#FDBA74;
+      --line:rgba(244,241,232,.10); --line-light:#E5E1D6;
+      --radius:22px; --shadow:0 24px 60px -18px rgba(0,0,0,.55);
+      --font-serif:'Fraunces',Georgia,serif;
+      --font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+    body{font-family:var(--font-sans);background:var(--paper);color:var(--q-ink);line-height:1.65;font-size:16px;overflow-x:hidden;}
+    img{max-width:100%;display:block;}
+    a{color:inherit;}
+    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+    em.accent{font-family:var(--font-serif);font-style:italic;font-weight:600;}
+    .sec-dark{background:var(--bg);color:var(--ink);}
+    .sec-dark em.accent{color:var(--mint);}
+    .sec-light{background:var(--paper);color:var(--q-ink);}
+    .sec-light em.accent{color:var(--green-deep);}
+
+    /* ===== Motion ===== */
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+    .reveal.in{opacity:1;transform:none;}
+    .rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+    .rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.28s}.rise.d4{animation-delay:.40s}.rise.d5{animation-delay:.52s}
+    @keyframes rise{to{opacity:1;transform:none;}}
+    @media (prefers-reduced-motion: reduce){
+      .reveal,.rise{opacity:1;transform:none;transition:none;animation:none;}
+      html{scroll-behavior:auto;}
+      .marquee-track,.leaf,.fan-float,.dot,.peak-glow{animation:none !important;}
+    }
+
+    /* ===== Topbar ===== */
+    .topbar{position:absolute;top:0;left:0;right:0;z-index:20;padding:14px 0;}
+    .topbar .container{display:flex;align-items:center;justify-content:center;}
+    .topbar img{height:30px;width:auto;}
+    @media(min-width:1024px){.topbar{padding:18px 0;}.topbar img{height:36px;}}
+
+    /* ===== Hero ===== */
+    .hero{position:relative;padding:66px 0 40px;overflow:hidden;}
+    .hero-bg{position:absolute;inset:0;background:
+      radial-gradient(110% 60% at 90% -10%,rgba(249,115,22,.18),transparent 60%),
+      radial-gradient(80% 50% at -10% 55%,rgba(154,52,18,.28),transparent 60%),
+      linear-gradient(175deg,#1A1F24 0%,var(--bg) 62%);}
+    .leaf{position:absolute;top:-30px;width:14px;height:14px;border-radius:14px 0 14px 0;background:linear-gradient(135deg,rgba(253,186,116,.35),rgba(234,88,12,.12));opacity:0;animation:leafFall linear infinite;pointer-events:none;}
+    @keyframes leafFall{0%{transform:translateY(-30px) rotate(0deg);opacity:0;}8%{opacity:.7;}92%{opacity:.5;}100%{transform:translateY(110vh) rotate(420deg);opacity:0;}}
+    .hero .container{position:relative;z-index:2;display:grid;gap:22px;width:100%;grid-template-columns:minmax(0,1fr);}
+    @media(min-width:1024px){
+      .hero{padding:124px 0 84px;min-height:100svh;display:flex;align-items:center;}
+      .hero .container{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:64px;align-items:center;}
+    }
+    .hero-badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(253,186,116,.35);background:rgba(234,88,12,.14);color:#FED7AA;border-radius:999px;padding:8px 15px;font-size:.78rem;font-weight:600;letter-spacing:.02em;backdrop-filter:blur(4px);}
+    .hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green-bright);box-shadow:0 0 0 0 rgba(249,115,22,.5);animation:pulse 2.2s infinite;}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(249,115,22,.45);}70%{box-shadow:0 0 0 9px rgba(249,115,22,0);}100%{box-shadow:0 0 0 0 rgba(249,115,22,0);}}
+    .hero h1{font-family:var(--font-serif);font-weight:600;font-size:clamp(3.2rem,14vw,6.6rem);line-height:.96;letter-spacing:-.025em;color:var(--ink);margin-top:16px;}
+    .hero h1 .q4{color:var(--mint);font-style:italic;}
+    .hero-sub{font-family:var(--font-serif);font-style:italic;font-weight:600;font-size:clamp(1.15rem,3.9vw,1.6rem);line-height:1.3;color:var(--ink);margin-top:14px;max-width:22em;}
+    .hero-sub b{font-style:normal;color:var(--mint);font-weight:600;}
+    .hero-what{font-size:clamp(.98rem,2.8vw,1.12rem);color:var(--ink-dim);margin-top:10px;}
+    .hero-what b{color:var(--ink);font-weight:700;}
+    .hero-cd{display:inline-block;margin-top:16px;text-align:center;color:var(--ink);background:rgba(15,19,22,.5);border:1px solid rgba(253,186,116,.3);border-radius:18px;padding:10px 18px 11px;backdrop-filter:blur(6px);line-height:1.3;}
+    .hero-cd .cd-big{display:block;font-family:var(--font-serif);font-style:italic;font-weight:600;font-size:1.45rem;color:var(--mint);letter-spacing:-.01em;}
+    .hero-cd .cd-big b{font-weight:600;}
+    .hero-cd .cd-small{display:block;font-size:.84rem;font-weight:600;color:var(--ink-dim);margin-top:1px;}
+    @media(max-width:1023px){.hero-copy{text-align:center;}.hero-sub,.hero-what{margin-left:auto;margin-right:auto;}}
+
+    /* ===== Buch-Mockup (wie Report-LP: Deckblatt + angedeutete Seiten + Siegel) ===== */
+    .fan-wrap{display:none;}
+    @media(min-width:1024px){.fan-wrap{display:flex;justify-content:flex-start;margin-top:34px;}}
+    .book-container{position:relative;width:250px;height:276px;margin:0 auto;perspective:1200px;padding-top:18px;}
+    .book-float{position:relative;width:200px;height:100%;animation:bookFloat 5s ease-in-out infinite;}
+    @keyframes bookFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+    .book-float::after{content:'';position:absolute;left:4%;right:-16%;bottom:-24px;height:30px;background:radial-gradient(ellipse at center,rgba(0,0,0,.5) 0%,transparent 70%);filter:blur(10px);z-index:-6;}
+    .book{position:relative;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(-6deg) rotateX(2deg);z-index:1;}
+    .fan-page{position:absolute;top:2.5%;left:10%;width:88%;height:94%;background:#FBFAF7;border-radius:3px 9px 9px 3px;box-shadow:10px 5px 24px rgba(0,0,0,.30);transform-origin:left bottom;overflow:hidden;}
+    .fan-page svg{position:absolute;inset:0;width:100%;height:100%;}
+    .fan-1{transform:rotate(4.5deg) translateX(4%);z-index:-1;}
+    .fan-2{transform:rotate(9.5deg) translateX(8%);z-index:-2;}
+    .fan-3{transform:rotate(15deg) translateX(12%);z-index:-3;filter:brightness(.97);}
+    .book-glow{position:absolute;width:140%;height:140%;top:-20%;left:-20%;background:radial-gradient(circle,rgba(249,115,22,.25) 0%,transparent 60%);border-radius:50%;pointer-events:none;z-index:-2;filter:blur(30px);}
+    .book-seal{position:absolute;top:-18px;right:-18px;width:70px;height:70px;z-index:12;transform:rotate(12deg);filter:drop-shadow(0 6px 14px rgba(0,0,0,.4));pointer-events:none;}
+    .book-seal svg{width:100%;height:100%;display:block;}
+    .book-cover{position:relative;width:100%;height:100%;background:linear-gradient(160deg,#1A1F24 0%,#20262C 30%,#262D34 65%,#1A1F24 100%);border-radius:3px 8px 8px 3px;box-shadow:0 25px 50px rgba(0,0,0,.5),0 12px 25px rgba(0,0,0,.3),inset 0 0 90px rgba(0,0,0,.25),inset 8px 0 14px rgba(0,0,0,.5),inset -2px 0 4px rgba(253,186,116,.12);padding:22px 20px 18px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;}
+    .book-cover::before{content:'';position:absolute;inset:0;background:linear-gradient(125deg,transparent 42%,rgba(255,255,255,.06) 50%,transparent 58%);pointer-events:none;}
+    .book-cover::after{content:'';position:absolute;top:11px;left:18px;right:11px;bottom:11px;border:1px solid rgba(253,186,116,.22);border-radius:3px;pointer-events:none;}
+    .book-spine-edge{position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.3) 40%,rgba(0,0,0,.1) 70%,transparent 100%);pointer-events:none;z-index:3;}
+    .book-pages-edge{position:absolute;right:-3px;top:4px;bottom:4px;width:4px;background:linear-gradient(90deg,rgba(0,0,0,.3),transparent 30%),repeating-linear-gradient(180deg,#EBE7DC 0px,#EBE7DC .5px,#C9C3B5 .5px,#C9C3B5 1px);border-radius:0 2px 2px 0;transform:rotateY(-8deg);transform-origin:left center;box-shadow:1px 0 5px rgba(0,0,0,.2);}
+    .book-top{display:flex;align-items:center;position:relative;z-index:2;}
+    .book-logo-img{height:19px;width:auto;opacity:.95;}
+    .book-title-block{position:relative;z-index:2;}
+    .book-eyebrow{font-size:.56rem;font-weight:700;color:var(--mint);letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px;}
+    .book-title{font-family:var(--font-serif);font-size:1.5rem;font-weight:600;color:var(--ink);line-height:1.1;letter-spacing:-.01em;}
+    .book-title i{font-style:italic;color:var(--mint);}
+    .book-divider{width:34px;height:2px;background:var(--green-bright);margin:10px 0 0;border-radius:2px;}
+    .book-bottom{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;}
+    .book-branch{font-size:.53rem;font-weight:600;color:rgba(244,241,232,.55);letter-spacing:.14em;text-transform:uppercase;max-width:120px;line-height:1.4;}
+    .book-pages-count{font-size:.5rem;font-weight:500;color:rgba(244,241,232,.4);letter-spacing:.08em;}
+    @media(min-width:1024px){.book-container.lg{width:330px;height:362px;}.book-container.lg .book-float{width:266px;}.book-container.lg .book-title{font-size:1.9rem;}.book-container.lg .book-logo-img{height:23px;}.book-container.lg .book-seal{width:88px;height:88px;top:-22px;right:-20px;}.book-container.lg .book-eyebrow{font-size:.62rem;}}
+    @media (prefers-reduced-motion: reduce){.book-float{animation:none;}}
+
+    /* ===== Quiz Card ===== */
+    .quiz-card{background:#fff;color:var(--q-ink);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 18px 18px;position:relative;}
+    @media(min-width:1024px){.quiz-card{padding:28px 28px 24px;}}
+    .quiz-head{display:flex;align-items:center;gap:13px;padding-bottom:14px;border-bottom:1px solid #EAE7DE;margin-bottom:14px;}
+    .quiz-card.quiz-started .quiz-head{display:none;}
+    .mini-cover{width:44px;height:60px;border-radius:5px;flex:none;background:linear-gradient(160deg,#1A1F24 0%,#20262C 40%,#262D34 100%);box-shadow:0 6px 16px rgba(20,24,28,.28);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2px;}
+    .mini-cover span{font-family:var(--font-serif);font-style:italic;color:var(--mint);font-size:.95rem;line-height:1;}
+    .mini-cover small{font-size:.36rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,232,.7);}
+    .quiz-head-titles{flex:1;min-width:0;}
+    .quiz-head-titles .t1{font-weight:800;font-size:.95rem;line-height:1.3;}
+    .quiz-head-titles .t2{font-size:.78rem;color:var(--q-dim);margin-top:2px;}
+    .quiz-tag{flex:none;background:var(--green);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.06em;border-radius:7px;padding:5px 9px;transform:rotate(2deg);}
+
+    .quiz-progress{display:none;margin-bottom:14px;}
+    .quiz-progress.visible{display:block;}
+    .quiz-progress-top{display:flex;justify-content:space-between;font-size:.74rem;font-weight:600;color:var(--q-dim);margin-bottom:7px;}
+    .quiz-progress-bar{height:5px;background:#ECE9E0;border-radius:99px;overflow:hidden;}
+    .quiz-progress-fill{height:100%;width:20%;background:linear-gradient(90deg,var(--green),var(--green-bright));border-radius:99px;transition:width .4s ease;}
+
+    .quiz-slide{display:none;}
+    .quiz-slide.is-active{display:block;animation:slideIn .28s ease;}
+    @keyframes slideIn{from{opacity:0;transform:translateX(14px);}to{opacity:1;transform:none;}}
+
+    .quiz-kicker{font-size:.8rem;font-weight:700;color:var(--green-deep);margin-bottom:7px;}
+    .quiz-question{font-weight:800;font-size:1.14rem;line-height:1.35;letter-spacing:-.01em;}
+    .quiz-subtext{font-size:.84rem;color:var(--q-dim);margin:6px 0 14px;}
+    .quiz-tiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;}
+    .quiz-tile{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:8px;text-align:center;font-family:var(--font-sans);background:#F7F5EF;border:1.5px solid var(--line-light);border-radius:14px;padding:18px 10px 15px;cursor:pointer;transition:border-color .15s,background .15s,transform .1s;}
+    .quiz-tile:hover{border-color:var(--green);background:#FFF7F1;}
+    .quiz-tile:active{transform:scale(.97);}
+    .quiz-tile.picked{border-color:var(--green);background:#FFF1E8;}
+    .quiz-tile .tile-icon{font-size:2.2rem;line-height:1;}
+    .quiz-tile .tile-label{font-size:.88rem;line-height:1.35;color:var(--q-ink);}
+    .quiz-tile .tile-label b{display:block;font-weight:800;font-size:.95rem;}
+    .quiz-trust{display:flex;justify-content:center;gap:14px;font-size:.72rem;color:var(--q-dim);margin-top:13px;padding-top:12px;border-top:1px solid #EAE7DE;}
+
+    .quiz-input-group{margin-bottom:11px;}
+    .quiz-label{display:block;font-size:.78rem;font-weight:700;margin-bottom:6px;color:var(--q-ink);}
+    .quiz-input{width:100%;font-family:var(--font-sans);font-size:16px;padding:13px 15px;border:1.5px solid var(--line-light);border-radius:12px;background:#FBFAF7;color:var(--q-ink);outline:none;transition:border-color .15s,box-shadow .15s;}
+    .quiz-input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(234,88,12,.13);background:#fff;}
+    .quiz-input.is-error{border-color:#DC2626;}
+    .phone-row{display:flex;gap:8px;}
+    .phone-prefix{flex:none;display:flex;align-items:center;font-family:var(--font-sans);font-size:16px;font-weight:600;color:var(--q-ink);background:#F1EFE8;border:1.5px solid var(--line-light);border-radius:12px;padding:0 10px;cursor:pointer;}
+    select.phone-prefix{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%234B5A50' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;background-size:11px;padding-right:26px;}
+    select.phone-prefix:focus{outline:none;border-color:var(--green);}
+
+    .quiz-cta{width:100%;font-family:var(--font-sans);font-size:1.02rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--green-bright),var(--green) 55%,var(--green-deep));border:none;border-radius:13px;padding:16px 18px;cursor:pointer;box-shadow:0 10px 24px -8px rgba(234,88,12,.55);transition:transform .12s,box-shadow .15s,opacity .15s;margin-top:4px;}
+    .quiz-cta:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 14px 28px -8px rgba(234,88,12,.6);}
+    .quiz-cta:active:not(:disabled){transform:scale(.985);}
+    .quiz-cta:disabled{opacity:.45;cursor:not-allowed;box-shadow:none;}
+    .quiz-back{background:none;border:none;font-family:var(--font-sans);font-size:.8rem;font-weight:600;color:var(--q-dim);cursor:pointer;padding:9px 2px 0;}
+    .quiz-back:hover{color:var(--q-ink);}
+    .quiz-error{display:none;font-size:.8rem;font-weight:600;color:#DC2626;margin-top:8px;}
+    .quiz-error.active{display:block;}
+    .quiz-privacy{display:flex;align-items:flex-start;gap:10px;font-size:.78rem;color:var(--q-dim);margin:4px 0 12px;cursor:pointer;line-height:1.5;}
+    .quiz-privacy input{width:17px;height:17px;margin-top:2px;accent-color:var(--green);flex:none;cursor:pointer;}
+    .quiz-privacy a{color:var(--green-deep);}
+
+    .quiz-success{display:none;text-align:center;padding:8px 0 4px;}
+    .quiz-success.active{display:block;animation:slideIn .3s ease;}
+    .success-check{width:56px;height:56px;border-radius:50%;background:#FFF1E8;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;color:var(--green);border:2px solid var(--green-bright);}
+    .quiz-success h3{font-family:var(--font-serif);font-weight:600;font-size:1.5rem;letter-spacing:-.01em;margin-bottom:6px;}
+    .quiz-success p{font-size:.86rem;color:var(--q-dim);}
+    .success-open{display:block;width:100%;text-decoration:none;text-align:center;font-size:1.02rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--green-bright),var(--green) 55%,var(--green-deep));border-radius:13px;padding:16px 18px;margin:16px 0 10px;box-shadow:0 10px 24px -8px rgba(234,88,12,.55);}
+    .success-mailnote{font-size:.78rem;color:var(--q-dim);}
+    .success-next{margin-top:16px;padding-top:14px;border-top:1px solid #EAE7DE;font-size:.82rem;color:var(--q-dim);}
+    .success-next a{display:inline-block;margin-top:6px;font-weight:700;color:var(--green-deep);text-decoration:none;}
+
+    /* ===== Sections ===== */
+    section{padding:60px 0;}
+    @media(min-width:1024px){section{padding:92px 0;}}
+    .section-label{display:flex;align-items:center;gap:10px;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;}
+    .sec-dark .section-label{color:var(--mint);}
+    .sec-light .section-label{color:var(--green-deep);}
+    .section-label::before{content:'';width:26px;height:1.5px;background:currentColor;}
+    .section-title{font-family:var(--font-serif);font-weight:600;font-size:clamp(1.8rem,6vw,2.7rem);line-height:1.12;letter-spacing:-.012em;max-width:20em;}
+    .section-sub{margin-top:12px;max-width:36em;font-size:1rem;}
+    .sec-dark .section-sub{color:var(--ink-dim);}
+    .sec-light .section-sub{color:var(--q-dim);}
+    .sec-dark .section-sub b{color:var(--ink);}
+
+    /* Zeitfenster */
+    .window-grid{display:grid;gap:28px;align-items:center;grid-template-columns:minmax(0,1fr);}
+    @media(min-width:1024px){.window-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;}}
+    .window-cta{display:inline-block;margin-top:22px;text-decoration:none;font-size:1rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--green-bright),var(--green) 55%,var(--green-deep));border-radius:13px;padding:15px 30px;box-shadow:0 12px 30px -8px rgba(234,88,12,.55);transition:transform .12s;}
+    .window-cta:hover{transform:translateY(-1px);}
+    .cd-card{position:relative;text-align:center;padding:6px 0 0;}
+    .cd-card::before{content:'';position:absolute;left:50%;top:40px;width:320px;height:320px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.16),transparent 65%);pointer-events:none;filter:blur(10px);}
+    .cd-card > *{position:relative;}
+    .cd-label{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
+    .cd-num{font-family:var(--font-serif);font-weight:600;font-style:italic;font-size:clamp(4.4rem,21vw,7.2rem);line-height:1;color:var(--mint);letter-spacing:-.03em;margin:6px 0 2px;font-variant-numeric:tabular-nums;text-shadow:0 0 40px rgba(253,186,116,.25);}
+    .cd-sub{font-size:.95rem;color:var(--ink-dim);max-width:22em;margin:0 auto;}
+    .cd-sub b{color:var(--ink);}
+    .chart{position:relative;max-width:540px;margin:34px auto 0;padding-top:38px;}
+    .chart-window{position:absolute;left:calc(100% / 6 + 3px);width:calc(100% / 2 - 6px);top:0;bottom:30px;border:1.5px dashed rgba(253,186,116,.42);border-radius:14px;pointer-events:none;}
+    .chart-window span{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--bg-2);color:var(--mint);font-size:.64rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:2px 9px;white-space:nowrap;}
+    .months{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;align-items:end;height:128px;position:relative;}
+    .mo{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px;height:100%;position:relative;}
+    .mo .bar{width:100%;border-radius:8px 8px 4px 4px;background:rgba(244,241,232,.10);transform-origin:bottom;transform:scaleY(0);transition:transform .9s cubic-bezier(.2,.7,.2,1);}
+    .mo.win .bar{background:linear-gradient(180deg,var(--green-bright),var(--green-deep));box-shadow:0 8px 18px -8px rgba(249,115,22,.6);}
+    .mo.peak .bar{background:linear-gradient(180deg,var(--mint),var(--green-bright) 60%,var(--green));box-shadow:0 0 26px rgba(253,186,116,.45);}
+    .mo.after .bar{background:linear-gradient(180deg,rgba(253,186,116,.75),rgba(234,88,12,.55));}
+    .mo .lab{font-size:.66rem;font-weight:700;letter-spacing:.06em;color:var(--ink-faint);}
+    .mo.win .lab,.mo.peak .lab{color:var(--ink);}
+    .mo.after .lab{color:var(--ink-dim);}
+    .mo .now{position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:.6rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--mint);white-space:nowrap;display:none;}
+    .mo .now::after{content:'';display:block;width:0;height:0;margin:2px auto 0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--mint);}
+    .mo.is-now .now{display:block;}
+    .cd-card.in .mo .bar{transform:scaleY(1);}
+    .cd-card.in .mo:nth-child(1) .bar{transition-delay:.05s}.cd-card.in .mo:nth-child(2) .bar{transition-delay:.15s}.cd-card.in .mo:nth-child(3) .bar{transition-delay:.25s}.cd-card.in .mo:nth-child(4) .bar{transition-delay:.35s}.cd-card.in .mo:nth-child(5) .bar{transition-delay:.45s}.cd-card.in .mo:nth-child(6) .bar{transition-delay:.55s}
+    .months-legend{display:flex;justify-content:center;gap:16px;margin-top:14px;font-size:.7rem;color:var(--ink-dim);flex-wrap:wrap;}
+    .months-legend span::before{content:'';display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:6px;vertical-align:-1px;background:rgba(244,241,232,.18);}
+    .months-legend span.w::before{background:var(--green-bright);}
+    .months-legend span.a::before{background:rgba(253,186,116,.7);}
+
+    /* Inhalt-Block */
+    .tease-grid{display:grid;gap:30px;align-items:center;grid-template-columns:minmax(0,1fr);}
+    @media(min-width:1024px){.tease-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:60px;}}
+    .check-list{list-style:none;margin-top:22px;display:grid;gap:14px;}
+    .check-list li{display:flex;align-items:flex-start;gap:12px;font-size:1rem;line-height:1.55;color:var(--q-dim);}
+    .check-list li b{color:var(--q-ink);}
+    .check-list .ck{flex:none;width:24px;height:24px;border-radius:50%;background:#FFF1E8;border:1.5px solid var(--green);color:var(--green-deep);font-weight:800;font-size:.8rem;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+    .tease-note{margin-top:20px;font-size:.86rem;color:var(--q-dim);}
+    .tease-fan{display:flex;justify-content:center;padding:30px 0 16px;}
+
+    /* Trust */
+    .logos{padding:10px 0 0;}
+    .logos-label{text-align:center;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--q-faint);margin-bottom:18px;}
+    .marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+    .marquee-track{display:flex;gap:12px;width:max-content;animation:marquee 38s linear infinite;}
+    @keyframes marquee{to{transform:translateX(-50%);}}
+    .logo-chip{flex:none;background:#fff;border:1px solid var(--line-light);border-radius:12px;padding:10px 18px;display:flex;align-items:center;justify-content:center;height:58px;}
+    .logo-chip img{height:36px;width:auto;max-width:120px;object-fit:contain;}
+    .network-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px;}
+    .network-stat b{display:block;font-family:var(--font-serif);font-weight:600;font-size:clamp(1.25rem,5.6vw,1.7rem);color:var(--green-deep);letter-spacing:-.01em;white-space:nowrap;}
+    .network-stat span{display:block;font-size:.72rem;color:var(--q-dim);line-height:1.35;margin-top:2px;}
+    .testi-grid{display:grid;gap:14px;margin-top:34px;grid-template-columns:minmax(0,1fr);}
+    @media(min-width:768px){.testi-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;}}
+    .testi{background:#fff;color:var(--q-ink);border:1px solid var(--line-light);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;gap:12px;}
+    .testi-result{font-family:var(--font-serif);font-weight:600;font-size:1.15rem;letter-spacing:-.01em;color:#9A3412;}
+    .testi .stars{color:#FBBF24;font-size:.85rem;letter-spacing:2px;margin-top:-4px;}
+    .testi p{font-size:.9rem;line-height:1.6;flex:1;}
+    .testi-foot{display:flex;align-items:center;gap:11px;}
+    .testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;flex:none;}
+    .testi-name{font-weight:700;font-size:.85rem;line-height:1.3;}
+    .testi-verified{font-size:.72rem;color:var(--q-dim);}
+    .google-badge{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 8px;background:#fff;border:1px solid var(--line-light);border-radius:999px;padding:9px 18px;font-size:.82rem;font-weight:600;color:var(--q-dim);margin-top:22px;}
+    .google-badge b{color:var(--q-ink);}
+    .gb-item{white-space:nowrap;}
+    .gb-item + .gb-item::before{content:'·';margin-right:8px;color:var(--q-faint);}
+
+    /* Final CTA */
+    .final-cta{background:linear-gradient(150deg,#2C1A0E,var(--bg-2) 70%);border:1px solid rgba(253,186,116,.22);border-radius:26px;padding:44px 26px;text-align:center;position:relative;overflow:hidden;}
+    @media(min-width:768px){.final-cta{padding:64px 48px;}}
+    .final-cta::before{content:'';position:absolute;top:-70px;right:-70px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.22),transparent 70%);}
+    .final-cta h2{font-family:var(--font-serif);font-weight:600;font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.12;letter-spacing:-.01em;max-width:17em;margin:0 auto;color:var(--ink);}
+    .final-cta h2 .ital{font-style:italic;color:var(--mint);}
+    .final-cta p{color:var(--ink-dim);margin:16px auto 26px;max-width:30em;font-size:1rem;}
+    .btn-primary{display:inline-block;text-decoration:none;font-size:1.05rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--green-bright),var(--green) 55%,var(--green-deep));border-radius:14px;padding:17px 34px;box-shadow:0 12px 30px -8px rgba(234,88,12,.55);transition:transform .12s,box-shadow .15s;}
+    .btn-primary:hover{transform:translateY(-1px);}
+    .final-note{font-size:.76rem;color:var(--ink-faint);margin-top:14px;}
+
+    footer{background:var(--bg);color:var(--ink-faint);border-top:1px solid var(--line);padding:34px 0 110px;}
+    @media(min-width:768px){footer{padding-bottom:44px;}}
+    .footer-row{display:flex;flex-wrap:wrap;gap:12px 26px;align-items:center;justify-content:space-between;font-size:.78rem;}
+    .footer-links{display:flex;gap:20px;}
+    .footer-links a{color:var(--ink-dim);text-decoration:none;}
+    .footer-note{font-size:.7rem;margin-top:16px;max-width:52em;}
+
+    /* Sticky CTA (mobil) */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(15,19,22,.86);backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s ease;}
+    .sticky-cta.visible{transform:none;}
+    .sticky-cta a{display:block;text-align:center;text-decoration:none;font-size:1rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--green-bright),var(--green) 55%,var(--green-deep));border-radius:13px;padding:15px;box-shadow:0 10px 24px -8px rgba(234,88,12,.55);}
+    @media(min-width:1024px){.sticky-cta{display:none;}}
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container">
+      <img src="assets/logo-white.png" alt="GreenCareers" width="120" height="40">
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero sec-dark" id="top">
+    <div class="hero-bg" aria-hidden="true">
+      <span class="leaf" style="left:8%;animation-duration:14s;animation-delay:0s"></span>
+      <span class="leaf" style="left:22%;animation-duration:17s;animation-delay:3s;width:10px;height:10px"></span>
+      <span class="leaf" style="left:41%;animation-duration:15s;animation-delay:6s"></span>
+      <span class="leaf" style="left:63%;animation-duration:19s;animation-delay:1.5s;width:11px;height:11px"></span>
+      <span class="leaf" style="left:78%;animation-duration:16s;animation-delay:8s"></span>
+      <span class="leaf" style="left:91%;animation-duration:18s;animation-delay:4.5s;width:9px;height:9px"></span>
+    </div>
+    <div class="container">
+      <div class="hero-copy">
+        <span class="hero-badge rise"><span class="dot"></span> Kostenlos für Straßen- &amp; Tiefbau-Inhaber</span>
+        <h1 class="rise d1">Der <span class="q4">Q4-Effekt.</span></h1>
+        <p class="hero-sub rise d2">So finden Straßen- und Tiefbau-Betriebe im 4.&nbsp;Quartal <b>die Mitarbeiter für die Saison 2027.</b></p>
+        <p class="hero-what rise d3">Der <b>3-Seiten-Plan als PDF</b> – kostenlos, sofort.</p>
+        <div class="hero-cd rise d4"><span class="cd-big">⏳ Noch <b id="cd-chip">–</b> Tage</span><span class="cd-small" id="cd-chip-text">um die Mitarbeiter für 2027 zu finden</span></div>
+        <div class="fan-wrap rise d5">
+          <div class="book-container lg">
+            <div class="book-glow"></div>
+            <div class="book-float">
+              <div class="fan-page fan-3"><svg viewBox="0 0 200 270" aria-hidden="true"><g transform="translate(18 0)"><polyline points="118,64 132,48 146,58 160,36 176,44" fill="none" stroke="rgba(234,88,12,.55)" stroke-width="3" stroke-linecap="round"/><rect x="118" y="84" width="52" height="4" rx="2" fill="#8E9A90"/><rect x="118" y="98" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="108" width="46" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="118" width="56" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="146" width="58" height="34" rx="4" fill="none" stroke="#D8D4C8" stroke-width="2"/><rect x="126" y="158" width="28" height="3" rx="1.5" fill="#C9C3B5"/><rect x="126" y="167" width="36" height="3" rx="1.5" fill="#C9C3B5"/><rect x="118" y="200" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="210" width="50" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="220" width="56" height="3" rx="1.5" fill="#DDD8CC"/></g></svg></div>
+              <div class="fan-page fan-2"><svg viewBox="0 0 200 270" aria-hidden="true"><g transform="translate(18 0)"><circle cx="146" cy="62" r="22" fill="none" stroke="#DDD8CC" stroke-width="9"/><path d="M146 40 a22 22 0 0 1 20.5 30" fill="none" stroke="rgba(234,88,12,.55)" stroke-width="9"/><rect x="118" y="100" width="56" height="4" rx="2" fill="#8E9A90"/><rect x="118" y="114" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="124" width="48" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="152" width="14" height="3" rx="1.5" fill="rgba(234,88,12,.5)"/><rect x="138" y="152" width="38" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="164" width="14" height="3" rx="1.5" fill="rgba(234,88,12,.5)"/><rect x="138" y="164" width="32" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="176" width="14" height="3" rx="1.5" fill="rgba(234,88,12,.5)"/><rect x="138" y="176" width="40" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="206" width="58" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="216" width="44" height="3" rx="1.5" fill="#DDD8CC"/></g></svg></div>
+              <div class="fan-page fan-1"><svg viewBox="0 0 200 270" aria-hidden="true"><g transform="translate(18 0)"><rect x="118" y="42" width="54" height="4" rx="2" fill="#8E9A90"/><rect x="118" y="56" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="66" width="50" height="3" rx="1.5" fill="#DDD8CC"/><rect x="122" y="128" width="10" height="34" rx="2" fill="#D8D4C8"/><rect x="136" y="112" width="10" height="50" rx="2" fill="#C9C3B5"/><rect x="150" y="96" width="10" height="66" rx="2" fill="rgba(234,88,12,.5)"/><rect x="164" y="120" width="10" height="42" rx="2" fill="#D8D4C8"/><rect x="118" y="176" width="58" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="186" width="46" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="196" width="54" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="224" width="34" height="10" rx="5" fill="rgba(234,88,12,.4)"/></g></svg></div>
+              <div class="book-seal" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><linearGradient id="sealGrad1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F97316"/><stop offset="1" stop-color="#C2410C"/></linearGradient></defs><polygon fill="url(#sealGrad1)" points="50.0,0.0 55.7,6.9 62.9,1.7 66.6,9.8 75.0,6.7 76.5,15.5 85.4,14.6 84.5,23.5 93.3,25.0 90.2,33.4 98.3,37.1 93.1,44.3 100.0,50.0 93.1,55.7 98.3,62.9 90.2,66.6 93.3,75.0 84.5,76.5 85.4,85.4 76.5,84.5 75.0,93.3 66.6,90.2 62.9,98.3 55.7,93.1 50.0,100.0 44.3,93.1 37.1,98.3 33.4,90.2 25.0,93.3 23.5,84.5 14.6,85.4 15.5,76.5 6.7,75.0 9.8,66.6 1.7,62.9 6.9,55.7 0.0,50.0 6.9,44.3 1.7,37.1 9.8,33.4 6.7,25.0 15.5,23.5 14.6,14.6 23.5,15.5 25.0,6.7 33.4,9.8 37.1,1.7 44.3,6.9"/><circle cx="50" cy="50" r="36" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.4" stroke-dasharray="2.5 3"/><text x="50" y="56" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="17.5" font-weight="800" letter-spacing=".5" fill="#fff">GRATIS</text></svg></div>
+              <div class="book">
+                <div class="book-pages-edge"></div>
+                <div class="book-cover">
+                  <div class="book-spine-edge"></div>
+                  <div class="book-top"><img class="book-logo-img" src="assets/logo-white.png" alt="GreenCareers"></div>
+                  <div class="book-title-block">
+                    <div class="book-eyebrow">3-Seiten-Plan</div>
+                    <div class="book-title">Der <i>Q4-Effekt</i></div>
+                    <div class="book-divider"></div>
+                  </div>
+                  <div class="book-bottom"><span class="book-branch">Straßen- &amp;<br>Tiefbau</span><span class="book-pages-count">3&nbsp;Seiten</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== QUIZ CARD ===== -->
+      <div class="quiz-card rise d3" id="quiz">
+        <div class="quiz-head">
+          <div class="mini-cover" aria-hidden="true"><span>Q4</span><small>Effekt</small></div>
+          <div class="quiz-head-titles">
+            <div class="t1">Der Q4-Effekt · 3-Seiten-Plan</div>
+            <div class="t2">Mitarbeiter finden im 4. Quartal · PDF · kostenlos</div>
+          </div>
+          <span class="quiz-tag">GRATIS</span>
+        </div>
+
+        <div class="quiz-progress" id="quiz-progress">
+          <div class="quiz-progress-top">
+            <span id="quiz-progress-label">Schritt 1 von 5</span>
+            <span id="quiz-progress-time">≈ 40&nbsp;Sek. übrig</span>
+          </div>
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-progress-fill"></div></div>
+        </div>
+
+        <div id="lead-form">
+          <!-- STEP 1 — Zeithorizont -->
+          <div class="quiz-slide is-active" data-slide="1">
+            <h3 class="quiz-question">Wann brauchen Sie den nächsten Mitarbeiter?</h3>
+            <p class="quiz-subtext">Ein Klick – dann geht's zum PDF.</p>
+            <div class="quiz-tiles">
+              <button type="button" class="quiz-tile" data-field="dringlichkeit" data-value="noch-2026"><span class="tile-icon">🍂</span><span class="tile-label"><b>Noch 2026</b> so schnell wie möglich</span></button>
+              <button type="button" class="quiz-tile" data-field="dringlichkeit" data-value="saisonstart-2027"><span class="tile-icon">🚧</span><span class="tile-label"><b>Zur Saison 2027</b> März / April</span></button>
+            </div>
+            <div class="quiz-trust"><span>🔒 DSGVO-konform</span><span>📄 3 Seiten · PDF</span></div>
+          </div>
+
+          <!-- STEP 2 — Rolle -->
+          <div class="quiz-slide" data-slide="2">
+            <div class="quiz-kicker">Passt – noch eine Frage:</div>
+            <h3 class="quiz-question">Was trifft auf Sie zu?</h3>
+            <div class="quiz-tiles" style="margin-top:14px;">
+              <button type="button" class="quiz-tile" data-field="rolle" data-value="inhaber-gf"><span class="tile-icon">🧑‍💼</span><span class="tile-label"><b>Inhaber / GF</b> Straßen- &amp; Tiefbau-Betrieb</span></button>
+              <button type="button" class="quiz-tile" data-field="rolle" data-value="angestellt"><span class="tile-icon">👷</span><span class="tile-label"><b>Angestellt</b> im Tiefbau</span></button>
+              <button type="button" class="quiz-tile" data-field="rolle" data-value="zulieferer"><span class="tile-icon">🚚</span><span class="tile-label"><b>Zulieferer o.&nbsp;ä.</b> Baubranche</span></button>
+              <button type="button" class="quiz-tile" data-field="rolle" data-value="andere-branche"><span class="tile-icon">💼</span><span class="tile-label"><b>Andere</b> Branche</span></button>
+            </div>
+            <button type="button" class="quiz-back" data-back="1">← Zurück</button>
+          </div>
+        </div>
+
+        <template id="tpl-slides-345">
+          <!-- STEP 3 — E-Mail -->
+          <div class="quiz-slide" data-slide="3">
+            <h3 class="quiz-question">Wohin dürfen wir das PDF schicken?</h3>
+            <div class="quiz-input-group" style="margin-top:14px;">
+              <label class="quiz-label" for="email">Geschäftliche E-Mail</label>
+              <input type="email" class="quiz-input" id="email" name="email" placeholder="ihre@firma.de" autocomplete="email" autocapitalize="none" spellcheck="false" inputmode="email">
+            </div>
+            <button type="button" class="quiz-cta" id="quiz-step3-cta">Weiter →</button>
+            <div class="quiz-error" id="quiz-step3-error">Bitte tragen Sie eine gültige E-Mail-Adresse ein.</div>
+            <button type="button" class="quiz-back" data-back="2">← Zurück</button>
+          </div>
+
+          <!-- STEP 4 — Name + Firma -->
+          <div class="quiz-slide" data-slide="4">
+            <h3 class="quiz-question">An wen dürfen wir das PDF adressieren?</h3>
+            <div class="quiz-input-group" style="margin-top:14px;">
+              <label class="quiz-label" for="fullname">Vor- und Nachname</label>
+              <input type="text" class="quiz-input" id="fullname" name="fullname" placeholder="z. B. Max Müller" autocomplete="name" autocapitalize="words" spellcheck="false">
+            </div>
+            <div class="quiz-input-group">
+              <label class="quiz-label" for="unternehmen">Firmenname</label>
+              <input type="text" class="quiz-input" id="unternehmen" name="unternehmen" placeholder="z. B. Müller Tiefbau GmbH" autocomplete="organization" autocapitalize="words" spellcheck="false">
+            </div>
+            <button type="button" class="quiz-cta" id="quiz-step4-cta">Weiter →</button>
+            <div class="quiz-error" id="quiz-step4-error">Bitte tragen Sie Vor-, Nachnamen und Firmennamen ein.</div>
+            <button type="button" class="quiz-back" data-back="3">← Zurück</button>
+          </div>
+
+          <!-- STEP 5 — Handynummer + Datenschutz → Submit -->
+          <div class="quiz-slide" data-slide="5">
+            <div class="quiz-kicker">Letzter Schritt</div>
+            <h3 class="quiz-question" id="phone-question">Ihre Handynummer</h3>
+            <p class="quiz-subtext" id="phone-subtext" style="display:none;"></p>
+            <div class="quiz-input-group" style="margin-top:14px;">
+              <div class="phone-row">
+                <select class="phone-prefix" id="phone-country" aria-label="Ländervorwahl">
+                  <option value="49" selected>DE +49</option>
+                  <option value="43">AT +43</option>
+                  <option value="41">CH +41</option>
+                  <option value="352">LU +352</option>
+                  <option value="33">FR +33</option>
+                  <option value="31">NL +31</option>
+                  <option value="32">BE +32</option>
+                  <option value="48">PL +48</option>
+                </select>
+                <input type="tel" class="quiz-input" id="phone" name="phone" placeholder="170 1234567" autocomplete="tel" inputmode="tel" aria-label="Handynummer">
+              </div>
+            </div>
+            <label class="quiz-privacy">
+              <input type="checkbox" id="privacy" name="privacy">
+              <span>Ich stimme der <a href="https://www.green-careers.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> zu und bin einverstanden, von GreenCareers kontaktiert zu werden.</span>
+            </label>
+            <button type="button" class="quiz-cta" id="quiz-final-submit" disabled>PDF jetzt herunterladen →</button>
+            <div class="quiz-error" id="quiz-step5-error">Bitte Handynummer eintragen und Datenschutz bestätigen.</div>
+            <button type="button" class="quiz-back" data-back="4">← Zurück</button>
+          </div>
+        </template>
+
+        <!-- SUCCESS -->
+        <div class="quiz-success" id="form-success">
+          <div class="success-check">✓</div>
+          <h3>Ihr PDF ist da.</h3>
+          <p>Der Q4-Effekt – drei Seiten, vier Minuten.</p>
+          <a class="success-open" id="report-open" href="assets/der-q4-effekt-tiefbau.pdf" target="_blank" rel="noopener">PDF öffnen (3&nbsp;Seiten) →</a>
+          <p class="success-mailnote" id="success-mailnote">Der Download-Link ist außerdem per <b>E-Mail</b> unterwegs.</p>
+          <div class="success-next">Sie wollen das 4.&nbsp;Quartal mit Plan angehen?<br><a id="success-beratung" href="https://beratung-tiefbau.green-careers.de/?utm_source=q4-effekt-tiefbau&amp;utm_medium=success&amp;utm_campaign=q4-effekt-2026-tiefbau" target="_blank" rel="noopener">Kostenloses Erstgespräch mit GreenCareers →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ZEITFENSTER (direkt unter dem Hero) ===== -->
+  <section class="sec-dark" id="zeitfenster" style="padding-top:10px;">
+    <div class="container">
+      <div class="window-grid">
+        <div class="cd-card reveal" id="cd-card">
+          <div class="cd-label">Ihr Zeitfenster</div>
+          <div class="cd-num" id="cd-num">–</div>
+          <div class="cd-sub" id="cd-sub">Tage, um die <b>Mitarbeiter für 2027</b> zu finden</div>
+          <div class="chart" aria-hidden="true">
+            <div class="chart-window"><span>Q4-Fenster</span></div>
+            <div class="months" id="months">
+              <div class="mo" data-m="8"><span class="now">Jetzt</span><div class="bar" style="height:34%"></div><span class="lab">SEP</span></div>
+              <div class="mo win" data-m="9"><span class="now">Jetzt</span><div class="bar" style="height:66%"></div><span class="lab">OKT</span></div>
+              <div class="mo win" data-m="10"><span class="now">Jetzt</span><div class="bar" style="height:84%"></div><span class="lab">NOV</span></div>
+              <div class="mo win peak" data-m="11"><span class="now">Jetzt</span><div class="bar" style="height:100%"></div><span class="lab">DEZ</span></div>
+              <div class="mo after" data-m="0"><span class="now">Jetzt</span><div class="bar" style="height:90%"></div><span class="lab">JAN</span></div>
+              <div class="mo after" data-m="1"><span class="now">Jetzt</span><div class="bar" style="height:80%"></div><span class="lab">FEB</span></div>
+            </div>
+          </div>
+          <div class="months-legend"><span>Planen</span><span class="w">Beste Chancen</span><span class="a">Bewerbungen laufen</span></div>
+        </div>
+        <div>
+          <div class="section-label reveal">Warum jetzt</div>
+          <h2 class="section-title reveal">Jetzt starten – und im 4.&nbsp;Quartal die Mitarbeiter finden, <em class="accent">die im Sommer keiner findet.</em></h2>
+          <p class="section-sub reveal">Zwischen Oktober und Dezember sind mehr Fachkräfte wechselbereit als im ganzen Sommer – und weniger Betriebe suchen. <b>Wer im September plant, hat zum Saisonstart 2027 die Mitarbeiter.</b> Wer wartet, sucht bis in den Sommer.</p>
+          <a class="window-cta reveal" href="#quiz" data-scroll-quiz id="window-cta">3-Seiten-Plan als PDF holen →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAS IM PDF STEHT (hell) ===== -->
+  <section class="sec-light" id="einblick">
+    <div class="container">
+      <div class="tease-grid">
+        <div>
+          <div class="section-label reveal">Im 3-Seiten-Plan</div>
+          <h2 class="section-title reveal">Drei Seiten. Vier Minuten. <em class="accent">So finden Sie Mitarbeiter im 4.&nbsp;Quartal.</em></h2>
+          <ul class="check-list reveal">
+            <li><span class="ck">✓</span><span>Die <b>4 Gründe</b>, warum Sie im 4.&nbsp;Quartal am leichtesten Mitarbeiter finden</span></li>
+            <li><span class="ck">✓</span><span>Die <b>Rückwärtsrechnung</b>: wann Sie spätestens starten müssen, damit der neue Mitarbeiter zur Saison 2027 da ist</span></li>
+            <li><span class="ck">✓</span><span>Der <b>Fahrplan</b>: was Sie im Oktober, November und Dezember konkret tun</span></li>
+          </ul>
+          <p class="tease-note reveal">Mit Zahlen belegt – Bundesagentur für Arbeit, Indeed Hiring Lab, IW Köln.</p>
+        </div>
+        <div class="tease-fan reveal">
+          <div class="book-container lg">
+            <div class="book-glow"></div>
+            <div class="book-float">
+              <div class="fan-page fan-3"><svg viewBox="0 0 200 270" aria-hidden="true"><g transform="translate(18 0)"><polyline points="118,64 132,48 146,58 160,36 176,44" fill="none" stroke="rgba(234,88,12,.55)" stroke-width="3" stroke-linecap="round"/><rect x="118" y="84" width="52" height="4" rx="2" fill="#8E9A90"/><rect x="118" y="98" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="108" width="46" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="118" width="56" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="146" width="58" height="34" rx="4" fill="none" stroke="#D8D4C8" stroke-width="2"/><rect x="126" y="158" width="28" height="3" rx="1.5" fill="#C9C3B5"/><rect x="126" y="167" width="36" height="3" rx="1.5" fill="#C9C3B5"/><rect x="118" y="200" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="210" width="50" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="220" width="56" height="3" rx="1.5" fill="#DDD8CC"/></g></svg></div>
+              <div class="fan-page fan-2"><svg viewBox="0 0 200 270" aria-hidden="true"><g transform="translate(18 0)"><circle cx="146" cy="62" r="22" fill="none" stroke="#DDD8CC" stroke-width="9"/><path d="M146 40 a22 22 0 0 1 20.5 30" fill="none" stroke="rgba(234,88,12,.55)" stroke-width="9"/><rect x="118" y="100" width="56" height="4" rx="2" fill="#8E9A90"/><rect x="118" y="114" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="124" width="48" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="152" width="14" height="3" rx="1.5" fill="rgba(234,88,12,.5)"/><rect x="138" y="152" width="38" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="164" width="14" height="3" rx="1.5" fill="rgba(234,88,12,.5)"/><rect x="138" y="164" width="32" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="176" width="14" height="3" rx="1.5" fill="rgba(234,88,12,.5)"/><rect x="138" y="176" width="40" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="206" width="58" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="216" width="44" height="3" rx="1.5" fill="#DDD8CC"/></g></svg></div>
+              <div class="fan-page fan-1"><svg viewBox="0 0 200 270" aria-hidden="true"><g transform="translate(18 0)"><rect x="118" y="42" width="54" height="4" rx="2" fill="#8E9A90"/><rect x="118" y="56" width="60" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="66" width="50" height="3" rx="1.5" fill="#DDD8CC"/><rect x="122" y="128" width="10" height="34" rx="2" fill="#D8D4C8"/><rect x="136" y="112" width="10" height="50" rx="2" fill="#C9C3B5"/><rect x="150" y="96" width="10" height="66" rx="2" fill="rgba(234,88,12,.5)"/><rect x="164" y="120" width="10" height="42" rx="2" fill="#D8D4C8"/><rect x="118" y="176" width="58" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="186" width="46" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="196" width="54" height="3" rx="1.5" fill="#DDD8CC"/><rect x="118" y="224" width="34" height="10" rx="5" fill="rgba(234,88,12,.4)"/></g></svg></div>
+              <div class="book-seal" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><linearGradient id="sealGrad2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F97316"/><stop offset="1" stop-color="#C2410C"/></linearGradient></defs><polygon fill="url(#sealGrad2)" points="50.0,0.0 55.7,6.9 62.9,1.7 66.6,9.8 75.0,6.7 76.5,15.5 85.4,14.6 84.5,23.5 93.3,25.0 90.2,33.4 98.3,37.1 93.1,44.3 100.0,50.0 93.1,55.7 98.3,62.9 90.2,66.6 93.3,75.0 84.5,76.5 85.4,85.4 76.5,84.5 75.0,93.3 66.6,90.2 62.9,98.3 55.7,93.1 50.0,100.0 44.3,93.1 37.1,98.3 33.4,90.2 25.0,93.3 23.5,84.5 14.6,85.4 15.5,76.5 6.7,75.0 9.8,66.6 1.7,62.9 6.9,55.7 0.0,50.0 6.9,44.3 1.7,37.1 9.8,33.4 6.7,25.0 15.5,23.5 14.6,14.6 23.5,15.5 25.0,6.7 33.4,9.8 37.1,1.7 44.3,6.9"/><circle cx="50" cy="50" r="36" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.4" stroke-dasharray="2.5 3"/><text x="50" y="56" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="17.5" font-weight="800" letter-spacing=".5" fill="#fff">GRATIS</text></svg></div>
+              <div class="book">
+                <div class="book-pages-edge"></div>
+                <div class="book-cover">
+                  <div class="book-spine-edge"></div>
+                  <div class="book-top"><img class="book-logo-img" src="assets/logo-white.png" alt="GreenCareers"></div>
+                  <div class="book-title-block">
+                    <div class="book-eyebrow">3-Seiten-Plan</div>
+                    <div class="book-title">Der <i>Q4-Effekt</i></div>
+                    <div class="book-divider"></div>
+                  </div>
+                  <div class="book-bottom"><span class="book-branch">Straßen- &amp;<br>Tiefbau</span><span class="book-pages-count">3&nbsp;Seiten</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST (hell) ===== -->
+  <section class="sec-light" id="netzwerk" style="padding-top:0;padding-bottom:40px;">
+    <div class="container">
+      <div class="section-label reveal">Wer dahintersteht</div>
+      <h2 class="section-title reveal">GreenCareers – das Karrierenetzwerk <em class="accent">für das Bau-Hauptgewerbe.</em></h2>
+      <div class="network-stats reveal">
+        <div class="network-stat"><b>15.000+</b><span>Bau-Fachkräfte im Pool</span></div>
+        <div class="network-stat"><b>500+</b><span>Bau-Betriebe</span></div>
+        <div class="network-stat"><b>900+</b><span>Platzierungen</span></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="testi-grid">
+        <div class="testi reveal">
+          <div class="testi-result">20+ Bewerber auf eine Stelle</div>
+          <span class="stars">★★★★★</span>
+          <p>„Nach kurzer Zeit hatte ich mehr als 20 Bewerber auf meine ausgeschriebene Stelle […]. Ich kann GreenCareers jedem Arbeitgeber und Arbeitnehmer nur empfehlen."</p>
+          <div class="testi-foot"><span class="testi-avatar">TK</span><div><div class="testi-name">Tobias Knauf</div><div class="testi-verified">✓ Verifizierte Google-Bewertung</div></div></div>
+        </div>
+        <div class="testi reveal">
+          <div class="testi-result">Offene, wertschätzende Kommunikation</div>
+          <span class="stars">★★★★★</span>
+          <p>„Die Zusammenarbeit mit GreenCareers war insgesamt sehr positiv. Das Team ist freundlich, kompetent und engagiert. Besonders angenehm war die offene und wertschätzende Kommunikation."</p>
+          <div class="testi-foot"><span class="testi-avatar">AH</span><div><div class="testi-name">Alexander Hildebrand</div><div class="testi-verified">✓ Verifizierte Google-Bewertung</div></div></div>
+        </div>
+        <div class="testi reveal">
+          <div class="testi-result">Mehrere Bewerber pro Tag</div>
+          <span class="stars">★★★★★</span>
+          <p>„Unkomplizierte Plattform, bei der es einen guten Rücklauf von mehreren Bewerbern pro Tag gegeben hat. Eine gute, offene Kommunikation erleichtert die Zusammenarbeit!"</p>
+          <div class="testi-foot"><span class="testi-avatar">BD</span><div><div class="testi-name">Boas Diehl</div><div class="testi-verified">✓ Verifizierte Google-Bewertung</div></div></div>
+        </div>
+      </div>
+      <div style="text-align:center;"><span class="google-badge reveal"><span class="gb-item">Google <b>4,9/5</b> <span style="color:#FBBF24;letter-spacing:1px;">★★★★★</span></span><span class="gb-item">500+ Betriebe</span><span class="gb-item">900+ Platzierungen</span></span></div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="sec-dark" id="abschluss">
+    <div class="container">
+      <div class="final-cta reveal">
+        <h2>Wer im 4.&nbsp;Quartal perfekt plant, startet <span class="ital">mit voller Mannschaft in die Saison 2027.</span></h2>
+        <p>Holen Sie sich den 3-Seiten-Plan, wie Sie jetzt die Mitarbeiter für 2027 finden – kostenlos als PDF.</p>
+        <a class="btn-primary" href="#quiz" data-scroll-quiz id="final-cta">PDF herunterladen →</a>
+        <div class="final-note">3&nbsp;Seiten · PDF · Keine Verpflichtung</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-row">
+        <span>© 2026 GreenCareers – Die Karriereplattform für das Bau-Hauptgewerbe.</span>
+        <div class="footer-links">
+          <a href="https://www.green-careers.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+          <a href="https://www.green-careers.de/impressum" target="_blank" rel="noopener">Impressum</a>
+          <a href="https://www.green-careers.de/agb" target="_blank" rel="noopener">AGB</a>
+        </div>
+      </div>
+      <p class="footer-note">Alle Zahlen im Q4-Effekt stammen aus öffentlichen Quellen (u. a. Bundesagentur für Arbeit, Indeed Hiring Lab, IW Köln) und sind im PDF ausgewiesen. Made with ♥ in Germany für den Bau.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" id="sticky-cta"><a href="#quiz" data-scroll-quiz id="sticky-cta-link">3-Seiten-Plan als PDF holen →</a></div>
+
+  <script>
+  (function(){
+    'use strict';
+
+    /* ===== KONFIGURATION ===== */
+    var LANDINGPAGE_ID = 'q4-effekt-2026-tiefbau';
+    var MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/4jlsa8ae4i2fx4g9f6ekpvr667icwsv2';
+    var FUNNEL_EVENT_ENDPOINT = 'https://gc-tracking-dashboard.vercel.app/api/recruiting/funnel-event';
+    var LEAD_EVENT_ENDPOINT = 'https://gc-tracking-dashboard.vercel.app/api/tracking/lead-event';
+    var META_PIXEL_ID = '634469765867935';
+    var CLARITY_PROJECT_ID = '';
+    // WhatsApp-Zustellung: erst auf true, wenn das Meta-Template freigegeben und
+    // das WhatsApp-Modul im Make-Szenario scharf ist – vorher darf die Seite
+    // keine WhatsApp-Zustellung versprechen.
+    var WHATSAPP_ENABLED = false;
+    var PDF_URL = 'assets/der-q4-effekt-tiefbau.pdf';
+    // Ende des Q4-Fensters (Countdown zählt täglich runter) – Europe/Berlin
+    var WINDOW_END = new Date('2027-01-01T00:00:00+01:00');
+
+    var IS_LIVE = /(^|\.)green-careers\.de$/.test(location.hostname);
+
+    /* ===== PIXEL + CLARITY (nur live) ===== */
+    if (IS_LIVE) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', META_PIXEL_ID);
+      fbq('track', 'PageView');
+      if (CLARITY_PROJECT_ID) {
+        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+      }
+    } else {
+      console.info('[GC Preview] Test-Modus: Tracking, Pixel und Webhook sind deaktiviert (Hostname ist nicht green-careers.de).');
+    }
+
+    /* ===== HELPERS ===== */
+    function uuidv4(){
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0,v=c==='x'?r:(r&3|8);return v.toString(16);});
+    }
+    var sessionId = (function(){
+      try { var s = sessionStorage.getItem('gc_session_id'); if (!s) { s = uuidv4(); sessionStorage.setItem('gc_session_id', s); } return s; } catch(e){ return uuidv4(); }
+    })();
+    var trackingParams = (function(){
+      var out = {};
+      try { var p = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){ var v = p.get(k); if (v) out[k] = v; }); } catch(e){}
+      return out;
+    })();
+    function getCookie(name){ try { var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)'); return m ? decodeURIComponent(m.pop()) : ''; } catch(e){ return ''; } }
+    function getFbp(){ return getCookie('_fbp'); }
+    function getFbc(){ var c = getCookie('_fbc'); if (c) return c; if (trackingParams.fbclid) return 'fb.1.' + Date.now() + '.' + trackingParams.fbclid; return ''; }
+    function getEventId(stage){
+      var key = 'gc_eid_' + stage + '_' + LANDINGPAGE_ID;
+      try { var id = localStorage.getItem(key); if (!id) { id = uuidv4(); localStorage.setItem(key, id); } return id; } catch(e){ return uuidv4(); }
+    }
+
+    /* ===== META-CRAWLER-GUARD ===== */
+    var loadedAt = Date.now(), realGesture = false;
+    ['pointerdown','touchstart','keydown'].forEach(function(ev){ window.addEventListener(ev, function(e){ if (e.isTrusted) realGesture = true; }, { passive:true, capture:true }); });
+    window.gcRealUser = function(){ return realGesture && (Date.now() - loadedAt) >= 4000; };
+
+    /* ===== TRACKING (identischer Vertrag wie die Report-LPs) ===== */
+    function trackFunnelEvent(eventType, slideId){
+      var body = Object.assign({ event_type: eventType, slide_id: slideId, landingpage_id: LANDINGPAGE_ID, session_id: sessionId, referrer: document.referrer || '', page_url: location.href, user_agent: navigator.userAgent }, trackingParams);
+      if (!IS_LIVE) { console.info('[GC Preview] funnel-event:', eventType, slideId || ''); return; }
+      try { fetch(FUNNEL_EVENT_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body), keepalive:true, credentials:'omit' }).catch(function(){}); } catch(e){}
+    }
+    function trackPixelEvent(name, params){
+      if (!IS_LIVE) { console.info('[GC Preview] pixel:', name, params || {}); return; }
+      try { if (typeof fbq === 'function') fbq('trackCustom', name, params || {}); } catch(e){}
+    }
+    function sendLeadStageEvent(stage, eventId){
+      var body = Object.assign({ stage: stage, event_id: eventId, landingpage_id: LANDINGPAGE_ID, session_id: sessionId, email: answers.email, vorname: answers.vorname || '', nachname: answers.nachname || '', unternehmen: answers.unternehmen || '', phone: answers.phone || '', rolle: answers.rolle || '', dringlichkeit: answers.dringlichkeit || '', fbp: getFbp(), fbc: getFbc(), page_url: location.href, referrer: document.referrer || '', user_agent: navigator.userAgent }, trackingParams);
+      try { var p = new URLSearchParams(location.search); if (p.get('tracking_debug') === '1') body.dry_run = true; if (p.get('test_capi')) body.test_event_code = p.get('test_capi'); } catch(e){}
+      if (!IS_LIVE) { console.info('[GC Preview] lead-event:', stage, body); return; }
+      try { fetch(LEAD_EVENT_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body), keepalive:true, credentials:'omit' }).catch(function(){}); } catch(e){}
+    }
+
+    /* ===== COUNTDOWN + "JETZT"-MARKER ===== */
+    var daysLeft = Math.max(0, Math.ceil((WINDOW_END.getTime() - Date.now()) / 86400000));
+    var cdChip = document.getElementById('cd-chip'), cdNum = document.getElementById('cd-num');
+    cdChip.textContent = daysLeft;
+    if (daysLeft === 0) {
+      cdChip.parentNode.innerHTML = '🚧 Saison 2027';
+      document.getElementById('cd-chip-text').textContent = 'die Bewerbungen für 2027 laufen jetzt';
+      document.getElementById('cd-sub').innerHTML = 'Das Q4-Fenster ist vorbei – <b>die Bewerbungen für 2027 laufen jetzt</b>';
+    }
+    (function(){
+      var m = new Date().getMonth();
+      document.querySelectorAll('#months .mo').forEach(function(el){ el.classList.toggle('is-now', parseInt(el.dataset.m, 10) === m); });
+    })();
+    function animateCount(el, to){
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced || to === 0) { el.textContent = to; return; }
+      var start = null, dur = 1100;
+      function step(ts){ if (!start) start = ts; var p = Math.min(1, (ts - start) / dur); var e = 1 - Math.pow(1 - p, 3); el.textContent = Math.round(to * e); if (p < 1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    }
+
+    /* ===== QUIZ ===== */
+    var answers = { dringlichkeit:'', rolle:'', email:'', vorname:'', nachname:'', unternehmen:'', phone:'' };
+    var slides = Array.prototype.slice.call(document.querySelectorAll('.quiz-slide'));
+    var progress = document.getElementById('quiz-progress');
+    var progressFill = document.getElementById('quiz-progress-fill');
+    var progressLabel = document.getElementById('quiz-progress-label');
+    var progressTime = document.getElementById('quiz-progress-time');
+    var quizCard = document.getElementById('quiz');
+    var quizStarted = false;
+    var TOTAL_STEPS = 5;
+    var TIME_LEFT = {1:'≈ 40 Sek.',2:'≈ 30 Sek.',3:'≈ 20 Sek.',4:'≈ 15 Sek.',5:'≈ 10 Sek.'};
+
+    function showSlide(n){
+      slides.forEach(function(s){ s.classList.toggle('is-active', s.dataset.slide === String(n)); });
+      quizCard.classList.toggle('quiz-started', n > 1);
+      if (n > 1) {
+        progress.classList.add('visible');
+        progressLabel.textContent = 'Schritt ' + n + ' von ' + TOTAL_STEPS;
+        progressTime.textContent = TIME_LEFT[n] + ' übrig';
+        progressFill.style.width = (n/TOTAL_STEPS*100) + '%';
+      } else { progress.classList.remove('visible'); }
+      trackFunnelEvent('slide_view', String(n));
+      trackPixelEvent('Quiz_Step_' + n + '_Viewed', { landingpage: LANDINGPAGE_ID });
+      var firstInput = slides[n-1] && slides[n-1].querySelector('.quiz-input');
+      if (firstInput) setTimeout(function(){ firstInput.focus({ preventScroll:true }); }, 250);
+      if (quizCard.getBoundingClientRect().top < 0) quizCard.scrollIntoView({ behavior:'smooth', block:'start' });
+    }
+
+    trackFunnelEvent('lp_view', null);
+    trackFunnelEvent('slide_view', '1');
+    trackPixelEvent('Quiz_Step_1_Viewed', { landingpage: LANDINGPAGE_ID });
+
+    document.querySelectorAll('.quiz-tile').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var field = btn.dataset.field, value = btn.dataset.value;
+        answers[field] = value;
+        btn.parentNode.querySelectorAll('.quiz-tile').forEach(function(b){ b.classList.remove('picked'); });
+        btn.classList.add('picked');
+        if (!quizStarted) { quizStarted = true; trackPixelEvent('Quiz_Started', { landingpage: LANDINGPAGE_ID, cta_location: 'quiz_tile_' + field }); }
+        if (field === 'dringlichkeit') { mountContactFields(); setTimeout(function(){ showSlide(2); }, 180); }
+        else { setTimeout(function(){ showSlide(3); }, 180); }
+      });
+    });
+    document.querySelectorAll('.quiz-back').forEach(function(btn){ btn.addEventListener('click', function(){ showSlide(parseInt(btn.dataset.back, 10)); }); });
+
+    var fieldsMounted = false;
+    var fullnameInput, firmaInput, emailInput, phoneInput, privacyCheck;
+    var step3CTA, step3Error, step4CTA, step4Error, finalSubmit, step5Error;
+
+    function evaluateFinalEnabled(){
+      var digits = phoneInput.value.replace(/\D/g,'');
+      finalSubmit.disabled = !(digits.length >= 6 && privacyCheck.checked);
+    }
+
+    function mountContactFields(){
+      if (fieldsMounted) return;
+      fieldsMounted = true;
+      var leadForm = document.getElementById('lead-form');
+      leadForm.appendChild(document.getElementById('tpl-slides-345').content.cloneNode(true));
+      Array.prototype.slice.call(leadForm.querySelectorAll('.quiz-slide')).forEach(function(s){ if (slides.indexOf(s) === -1) slides.push(s); });
+
+      emailInput = document.getElementById('email');
+      fullnameInput = document.getElementById('fullname');
+      firmaInput = document.getElementById('unternehmen');
+      phoneInput = document.getElementById('phone');
+      privacyCheck = document.getElementById('privacy');
+      step3CTA = document.getElementById('quiz-step3-cta');
+      step3Error = document.getElementById('quiz-step3-error');
+      step4CTA = document.getElementById('quiz-step4-cta');
+      step4Error = document.getElementById('quiz-step4-error');
+      finalSubmit = document.getElementById('quiz-final-submit');
+      step5Error = document.getElementById('quiz-step5-error');
+
+      if (WHATSAPP_ENABLED) {
+        document.getElementById('phone-question').textContent = 'Wohin dürfen wir das PDF zusätzlich per WhatsApp schicken?';
+        var st = document.getElementById('phone-subtext'); st.textContent = 'So haben Sie es direkt auf dem Handy.'; st.style.display = '';
+        document.getElementById('success-mailnote').innerHTML = 'Der Download-Link ist außerdem per <b>WhatsApp und E-Mail</b> unterwegs.';
+      }
+
+      leadForm.querySelectorAll('.quiz-back').forEach(function(btn){ btn.addEventListener('click', function(){ showSlide(parseInt(btn.dataset.back, 10)); }); });
+      emailInput.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ e.preventDefault(); step3CTA.click(); } });
+      firmaInput.addEventListener('keydown', function(e){ if (e.key === 'Enter'){ e.preventDefault(); step4CTA.click(); } });
+      phoneInput.addEventListener('input', evaluateFinalEnabled);
+      privacyCheck.addEventListener('change', evaluateFinalEnabled);
+      [emailInput, fullnameInput, firmaInput, phoneInput].forEach(function(el){ el.addEventListener('input', function(){ el.classList.remove('is-error'); }); });
+
+      // STEP 3 — E-Mail → Lead gesichert (Pixel + CAPI, gemeinsame event_id)
+      step3CTA.addEventListener('click', function(){
+        var email = emailInput.value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { emailInput.classList.add('is-error'); step3Error.classList.add('active'); return; }
+        emailInput.classList.remove('is-error'); step3Error.classList.remove('active');
+        answers.email = email;
+        if (!window.__gcLeadFired) {
+          window.__gcLeadFired = true;
+          var leadEventId = getEventId('lead');
+          if (IS_LIVE) { try { if (typeof fbq === 'function') fbq('track', 'Lead', { content_name:'Q4-Effekt Tiefbau E-Mail erhalten', landingpage: LANDINGPAGE_ID }, { eventID: leadEventId }); } catch(e){} }
+          else { console.info('[GC Preview] pixel: Lead (eventID ' + leadEventId + ')'); }
+          sendLeadStageEvent('lead', leadEventId);
+        }
+        showSlide(4);
+      });
+
+      // STEP 4 — Name + Firma
+      step4CTA.addEventListener('click', function(){
+        var parts = fullnameInput.value.trim().split(/\s+/).filter(Boolean);
+        var firma = firmaInput.value.trim();
+        if (parts.length < 2 || firma.length < 2) {
+          if (parts.length < 2) fullnameInput.classList.add('is-error');
+          if (firma.length < 2) firmaInput.classList.add('is-error');
+          step4Error.classList.add('active'); return;
+        }
+        step4Error.classList.remove('active');
+        answers.vorname = parts[0]; answers.nachname = parts.slice(1).join(' '); answers.unternehmen = firma;
+        showSlide(5);
+      });
+
+      finalSubmit.addEventListener('click', onFinalSubmit);
+    }
+
+    function onFinalSubmit(){
+      var digits = phoneInput.value.replace(/\D/g,'');
+      if (digits.length < 6 || !privacyCheck.checked) { step5Error.classList.add('active'); return; }
+      if (!window.gcRealUser()) { step5Error.textContent = 'Bitte versuchen Sie es in einem Moment erneut.'; step5Error.classList.add('active'); return; }
+      step5Error.classList.remove('active');
+      var cc = document.getElementById('phone-country').value || '49';
+      if (digits.startsWith('00')) digits = digits.slice(2);
+      else if (digits.startsWith('0')) digits = cc + digits.slice(1);
+      else if (!digits.startsWith(cc)) digits = cc + digits;
+      answers.phone = '+' + digits;
+
+      var originalText = finalSubmit.textContent;
+      finalSubmit.textContent = 'Wird freigeschaltet…';
+      finalSubmit.disabled = true;
+
+      var payload = Object.assign({ vorname: answers.vorname, nachname: answers.nachname, unternehmen: answers.unternehmen, email: answers.email, phone: answers.phone, rolle: answers.rolle, dringlichkeit: answers.dringlichkeit, source: LANDINGPAGE_ID, landingpage_id: LANDINGPAGE_ID, session_id: sessionId, timestamp: new Date().toISOString(), page_url: location.href, referrer: document.referrer || '', user_agent: navigator.userAgent }, trackingParams);
+
+      var send;
+      if (IS_LIVE) {
+        send = fetch(MAKE_WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) }).then(function(r){ if (!r.ok) throw new Error('Webhook returned ' + r.status); });
+      } else {
+        console.info('[GC Preview] Make-Webhook (nicht gesendet):', payload);
+        send = new Promise(function(r){ setTimeout(r, 700); });
+      }
+
+      send.then(function(){
+        trackFunnelEvent('submit_success', null);
+        var crEventId = getEventId('complete_registration');
+        if (IS_LIVE) { try { if (typeof fbq === 'function') fbq('track', 'CompleteRegistration', { content_name:'Q4-Effekt Tiefbau angefordert', landingpage: LANDINGPAGE_ID }, { eventID: crEventId }); } catch(e){} }
+        else { console.info('[GC Preview] pixel: CompleteRegistration (eventID ' + crEventId + ')'); }
+        sendLeadStageEvent('complete_registration', crEventId);
+        try { localStorage.setItem('gc_lead_data', JSON.stringify({ vorname: answers.vorname, nachname: answers.nachname, unternehmen: answers.unternehmen, email: answers.email, phone: answers.phone })); } catch(e){}
+        document.getElementById('lead-form').style.display = 'none';
+        progress.style.display = 'none';
+        document.getElementById('form-success').classList.add('active');
+        window.__gcSubmitted = true;
+        // Sticky-Button wird zum Download-Link – der Leser soll das PDF jederzeit öffnen können
+        var st = document.getElementById('sticky-cta-link');
+        st.textContent = 'PDF öffnen (3 Seiten) →'; st.href = PDF_URL; st.target = '_blank'; st.rel = 'noopener'; st.removeAttribute('data-scroll-quiz'); st.dataset.download = '1';
+        updateStickyCta();
+        quizCard.scrollIntoView({ behavior:'smooth', block:'center' });
+      }).catch(function(err){
+        console.error('Form submit error:', err);
+        trackFunnelEvent('submit_failed', null);
+        step5Error.textContent = 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.';
+        step5Error.classList.add('active');
+        finalSubmit.textContent = originalText;
+        finalSubmit.disabled = false;
+      });
+    }
+
+    document.getElementById('report-open').addEventListener('click', function(){ trackPixelEvent('Report_Opened', { landingpage: LANDINGPAGE_ID }); });
+    document.getElementById('success-beratung').addEventListener('click', function(){ trackPixelEvent('Beratung_Link_Clicked', { landingpage: LANDINGPAGE_ID, cta_location: 'success' }); });
+
+    /* ===== UI ===== */
+    document.querySelectorAll('[data-scroll-quiz]').forEach(function(el){
+      el.addEventListener('click', function(e){
+        if (el.dataset.download) { trackPixelEvent('Report_Opened', { landingpage: LANDINGPAGE_ID, cta_location: 'sticky' }); return; }
+        e.preventDefault();
+        trackPixelEvent(el.id === 'sticky-cta-link' ? 'Sticky_CTA_Clicked' : 'Quiz_Started', { landingpage: LANDINGPAGE_ID, cta_location: el.id || 'cta' });
+        quizCard.scrollIntoView({ behavior:'smooth', block:'start' });
+      });
+    });
+
+    var stickyCta = document.getElementById('sticky-cta');
+    function updateStickyCta(){
+      var quizRect = quizCard.getBoundingClientRect();
+      var quizVisible = quizRect.top < window.innerHeight * .8 && quizRect.bottom > 90;
+      stickyCta.classList.toggle('visible', !quizVisible && window.scrollY > 160);
+    }
+    window.addEventListener('scroll', updateStickyCta, { passive:true });
+    window.addEventListener('resize', updateStickyCta);
+    updateStickyCta();
+
+    var depthFired = {};
+    window.addEventListener('scroll', function(){
+      var pct = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+      [50, 90].forEach(function(mark){ if (pct >= mark && !depthFired[mark]) { depthFired[mark] = true; trackPixelEvent('Scroll_' + mark, { landingpage: LANDINGPAGE_ID }); } });
+    }, { passive:true });
+
+    var pending = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+    var cdCard = document.getElementById('cd-card'), cdAnimated = false;
+    function revealEl(el){
+      el.classList.add('in');
+      var i = pending.indexOf(el); if (i > -1) pending.splice(i, 1);
+      if (el === cdCard && !cdAnimated) { cdAnimated = true; animateCount(cdNum, daysLeft); }
+    }
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){ entries.forEach(function(en){ if (en.isIntersecting) { revealEl(en.target); io.unobserve(en.target); } }); }, { threshold:.12, rootMargin:'0px 0px -40px 0px' });
+      pending.forEach(function(el){ io.observe(el); });
+      window.addEventListener('scroll', function(){ if (!pending.length) return; pending.slice().forEach(function(el){ if (el.getBoundingClientRect().top < window.innerHeight + 60) { revealEl(el); io.unobserve(el); } }); }, { passive:true });
+    } else { pending.slice().forEach(revealEl); }
+
+  })();
+  </script>
+</body>
+</html>
